@@ -1,6 +1,6 @@
 # ADDAPPTABLES card
 
-[See demo](http://addapptables.com/admin/components/modals-alerts)
+[See demo](http://localhost:4200/admin/components/cards)
 
 ## Getting Started
 To get started, lets install the package thru npm:
