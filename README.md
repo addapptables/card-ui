@@ -1,5 +1,7 @@
 # ADDAPPTABLES card
 
+[See demo](http://addapptables.com/admin/components/modals-alerts)
+
 ## Getting Started
 To get started, lets install the package thru npm:
 
@@ -10,8 +12,16 @@ npm i @addapptables/card --S
 Install peer dependencies
 
 ```
-npm i @ngx-translate/core --S
+npm i
+@ngx-translate/core
+@angular/material
+@angular/animations
+@angular/cdk --S
 ```
+
+## Configuration
+
+Configure @ngx-translate/core see [link](https://github.com/ngx-translate/core)
 
 ## How to use
 
