@@ -1,5 +1,7 @@
 # ADDAPPTABLES card
 
+ADAPTABLES card is a library for angular
+
 [See demo](http://addapptables.com/admin/components/cards)
 
 ## Getting Started
