@@ -3,7 +3,7 @@
 [See demo](http://addapptables.com/admin/components/cards)
 
 ## Getting Started
-To get started, lets install the package thru npm:
+To get started, let's install the package through npm:
 
 ```
 npm i @addapptables/card --S
@@ -13,17 +13,23 @@ Install peer dependencies
 
 ```
 npm i
-@ngx-translate/core
+@addapptables/core
 @angular/material
 @angular/animations
 @angular/cdk --S
 ```
 
-## Configuration
-
-Configure @ngx-translate/core see [link](https://github.com/ngx-translate/core)
-
 ## How to use
+
+- Import the module CardModule
+
+```typescript
+import { CardModule } from '@addapptables/card';
+@NgModule({
+  imports: [CardModule]
+})
+export class YourModule { }
+```
 
 simple card
 ```html
@@ -32,7 +38,7 @@ simple card
     <addapptable-card-header-linear>
       <addapptable-card-title>
         <mat-icon matSuffix>horizontal_split</mat-icon>
-        <span>{{'card.simple' | translate}}</span>
+        <span>Simple card</span>
       </addapptable-card-title>
     </addapptable-card-header-linear>
   </addapptable-card-header>
@@ -50,7 +56,7 @@ Oval card
     <addapptable-card-header-oval>
       <addapptable-card-title>
         <mat-icon matSuffix>horizontal_split</mat-icon>
-        <span>{{'card.oval' | translate}}</span>
+        <span>Oval card</span>
       </addapptable-card-title>
     </addapptable-card-header-oval>
   </addapptable-card-header>
@@ -60,9 +66,12 @@ Oval card
 </addapptable-card>
 ```
 
+- Finaly, it is important to import the styles to the application
+
 ```scss
+@import '~@addapptables/core/addapptables-grid.theme';
 @import '~@angular/material/theming';
-@import '~@addapptables/card/_addapptables-card.theme';
+@import '~@addapptables/card/addapptables-card.theme';
 
 $addapptable-app-primary: mat-palette($mat-teal, 800);
 $addapptable-app-accent:  mat-palette($mat-pink, 800, A100, 100);
@@ -78,8 +87,15 @@ $addapptable-theme-variables: (
     color-danger: #d43934,
     gray-color: #696868
 );
-
+@include mat-core();
 body.theme-default {
+    @include angular-material-theme($addapptable-app-theme);
     @include addapptable-card($addapptable-app-theme, $addapptable-theme-variables);
 }
+```
+
+- Do not forget to put the theme-default class in the html body
+
+```html
+<body class="theme-default"></body>
 ```

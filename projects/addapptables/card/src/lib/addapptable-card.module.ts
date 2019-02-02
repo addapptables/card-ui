@@ -10,12 +10,10 @@ import { CardHeaderSubtitleDirective } from './directives/card-header-subtitle.d
 import { CardHeaderOvalComponent } from './components/card-header/components/card-header-oval/card-header-oval.component';
 import { CardHeaderLinearComponent } from './components/card-header/components/card-header-linear/card-header-linear.component';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
-    CommonModule,
-    TranslateModule
+    CommonModule
   ],
   declarations: [
     CardComponent,
