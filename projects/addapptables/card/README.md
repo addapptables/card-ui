@@ -4,6 +4,8 @@ ADAPTABLES card is a library for angular
 
 [See demo](http://addapptables.com/admin/components/cards)
 
+[Example code](https://stackblitz.com/edit/angular-card-addapptables)
+
 ## Getting Started
 To get started, let's install the package through npm:
 
